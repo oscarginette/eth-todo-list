@@ -12,4 +12,10 @@ contract TodoList {
         string content;
         bool completed;
     }
+
+    // we want to put this in storage in blockchain
+    // mapping is a hash with key value pair, uint will be the id
+    mapping(uint => Task) public tasks;
+
+    
 }
