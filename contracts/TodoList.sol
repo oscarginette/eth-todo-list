@@ -17,5 +17,15 @@ contract TodoList {
     // mapping is a hash with key value pair, uint will be the id
     mapping(uint => Task) public tasks;
 
-    
+    constructor() public {
+        createTask("Check out oscar ginette's github");
+    }
+
+    function createTask(string memory _content) public {
+        // determine the id of the task we want to create
+        taskCount++;
+        tasks[taskCount] = Task(taskCount, _content, false);
+    }
+
+
 }
